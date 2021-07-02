@@ -18,7 +18,7 @@ jobs:
         run: ./gradlew test
       - name: Coveralls with Gradle
         env:
-          repo_token: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
+          COVERALLS_REPO_TOKEN: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
         run: ./gradlew jacocoTestReport coveralls
   coverage:
     runs-on: ubuntu-latest
