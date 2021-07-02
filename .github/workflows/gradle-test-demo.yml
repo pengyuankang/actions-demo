@@ -25,7 +25,7 @@ jobs:
           CI: true
           COVERALLS_REPO_TOKEN: ${{ secrets.repo_token }}
         run: ./gradlew jacocoTestReport coveralls
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.github_token }}
+#      - name: Coveralls
+#        uses: coverallsapp/github-action@master
+#        with:
+#          github-token: ${{ secrets.github_token }}
