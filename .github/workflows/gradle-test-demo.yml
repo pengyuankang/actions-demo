@@ -19,4 +19,4 @@ jobs:
       - name: Coveralls with Gradle
         env:
           COVERALLS_REPO_TOKEN: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
-        run: ./gradlew jacocoTestReport coveralls
+        run: ./gradlew jacocoTestReport coveralls && echo ${{repo_token}}
