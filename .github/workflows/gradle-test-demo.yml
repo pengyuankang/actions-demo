@@ -18,5 +18,5 @@ jobs:
         run: ./gradlew test
       - name: Coveralls with Gradle
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.repo_token }}
+          COVERALLS_REPO_TOKEN: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
         run: ./gradlew jacocoTestReport coveralls
