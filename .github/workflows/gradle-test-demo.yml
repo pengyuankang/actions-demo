@@ -16,21 +16,15 @@ jobs:
         run: ./gradlew build
       - name: Test with Gradle
         run: ./gradlew test
-      - name: Coveralls with Gradle
-        env:
-          COVERALLS_REPO_TOKEN: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
-        run: ./gradlew jacocoTestReport coveralls
   coverage:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - name: Coverage
-        run: ./gradlew jacocoTestReport coveralls
         env:
           CI: true
+          COVERALLS_REPO_TOKEN: 5WzTo6eDMB0WZgKiNUfCrvZwsyGlaVRJ1
+        run: ./gradlew jacocoTestReport coveralls
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
